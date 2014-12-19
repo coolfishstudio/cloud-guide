@@ -1,0 +1,26 @@
+<%= include header %>
+<%= include left %>
+<div class="right-content"><!-- rightContent -->
+	<div class="right-conent-box">
+		<div class="inner-menu">
+			<header class="inner-menu-header">
+				素材管理
+				<a href="/user/projects/create"><i class="right add icon"></i></a>
+				<article>
+					按我创建的、参与的和归档的项目分类
+				</article>
+			</header>
+			<a class="item active" ng-click="switchTab('all');" ng-class="{active:inner_menu == 'all'}"><i class="coding project icon"></i>所有项目</a>
+			<a class="item" ng-click="switchTab('created');" ng-class="{active:inner_menu == 'created'}"><i class="edit sign icon"></i>我创建的</a>
+			<a class="item" ng-click="switchTab('joined');" ng-class="{active:inner_menu == 'joined'}"><i class="umbrella icon"></i>我参与的</a>
+
+			<div class="sep"></div>
+			<a class="item" ng-click="switchTab('watched')" ng-class="{active:inner_menu == 'watched'}"><i class="unhide icon"></i>我关注的</a>
+			<a class="item" ng-click="switchTab('stared')" ng-class="{active:inner_menu == 'stared'}"><i class="star icon"></i>我收藏的</a>
+		</div>
+		<div class="inner-content">
+			asdsdasd
+		</div>
+	</div><!-- rightCont end -->
+</div>
+<%= include footer %>
