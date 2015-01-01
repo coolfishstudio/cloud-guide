@@ -1,18 +1,16 @@
 *{margin: 0px; padding: 0px;list-style: none;}
 a{text-decoration: none;color: rgba(0, 0, 0, 0.65);}
-.top-bar{background: rgba(0, 0, 0, 0.75);color: #e1e1e1;width: 100%;min-width: 800px;height: 60px;z-index: 99;position: fixed;display: block;top: 0;left: 0;font-size: 20px;white-space: normal;}
-.left-bar{font-size: 16px;position: fixed;display: block;left: 0;background: #dddddd;height: 100%;width: 84px;border: 0;z-index: 99;top: 60px;border-right: 1px solid #eff2f8;}
-.right-content{background: #F7F6F2;position: fixed;width: 100%;height: 100%;padding-top: 60px;padding-left: 85px;}
-.top-bar .logoName{margin-left: 90px;}
-.top-bar .logoName i{font-size: 40px;line-height: 60px;}
-.left-bar .leftMenu{list-style: none;padding: 0;margin: 0;text-align: center;cursor: pointer;}
-.left-bar .leftMenu li{position: relative;color: rgba(0, 0, 0, 0.65);}
-.left-bar .leftMenu li a{padding: 12px 5px;display: block;transition:.4s all ease;}
-.left-bar .leftMenu li a.active{color:#CC9900;}
-.left-bar .leftMenu li a:hover{background: rgba(0, 0, 0, 0.15);color:rgba(204, 153, 0, 0.5);}
-.left-bar .leftMenu li i{display: block;text-decoration: none;cursor: pointer;font-size:28px;height: 30px;line-height: 30px;}
-.left-bar .leftMenu li span{font-size: 12px; }
 
-.right-content .right-conent-box{overflow: hidden;margin-right: 85px;height: 100%!important;}
-.right-content .right-conent-box .inner-menu{width: 200px;height: 100%!important;overflow-y: auto;border-right: 1px solid #CCC;float: left;}
-.right-content .right-conent-box .inner-content{float: left;}
+body{background: #eee;}
+/* 顶部 */
+
+.top-bar{position: fixed;top: 0;right: 0;left: 0;z-index: 889;margin-bottom: 0;}
+.top-bar .navbar-inner{padding: 0 20px;-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);min-height: 50px;background-color: #fafafa;background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);border: 1px solid #d4d4d4;}
+.top-bar .navbar-inner .logoName{display: block;float: left;padding: 15px 20px 15px;margin-left: -20px;font-size: 20px;font-weight: 200;color: #777777;}
+
+
+.left-bar{z-index: 888;position: fixed;top: 0px;left: 0;width: 180px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) 2px 2px 6px;}
+.left-bar .left-menu{list-style: none;padding: 0;margin: 0;text-align: center;cursor: pointer;margin-top: 52px;height:100%;}
+.left-bar .left-menu li{padding: 6px;height: 140px;background: #ddd;}
+
+.right-bar{z-index: 888;position: fixed;top: 0px;right: 0;width: 360px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) -2px -2px 6px;}
