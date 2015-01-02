@@ -9,8 +9,12 @@ body{background: #eee;}
 .top-bar .navbar-inner .logoName{display: block;float: left;padding: 15px 20px 15px;margin-left: -20px;font-size: 20px;font-weight: 200;color: #777777;}
 
 
-.left-bar{z-index: 888;position: fixed;top: 0px;left: 0;width: 180px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) 2px 2px 6px;}
+.left-bar{z-index: 888;position: fixed;top: 0px;left: 0;width: 180px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) 2px 2px 6px;height: 100%;overflow-y: auto;}
 .left-bar .left-menu{list-style: none;padding: 0;margin: 0;text-align: center;cursor: pointer;margin-top: 52px;height:100%;}
 .left-bar .left-menu li{padding: 6px;height: 140px;background: #ddd;}
 
 .right-bar{z-index: 888;position: fixed;top: 0px;right: 0;width: 360px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) -2px -2px 6px;}
+
+.right-bar .right-menu{width: 59px;height: 100%;border-right: 1px #ddd solid;float: left;}
+
+
