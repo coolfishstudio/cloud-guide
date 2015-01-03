@@ -10,11 +10,19 @@ body{background: #eee;}
 
 
 .left-bar{z-index: 888;position: fixed;top: 0px;left: 0;width: 140px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) 2px 2px 6px;height: 100%;overflow-y: auto;}
-.left-bar .left-menu{list-style: none;padding: 0;margin: 0;text-align: center;cursor: pointer;margin-top: 52px;height:100%;}
-.left-bar .left-menu li{padding: 6px;height: 120px;background: #ddd;}
+.left-bar .left-menu{list-style: none;padding:5px 0px;margin: 0;text-align: center;cursor: pointer;margin-top: 52px;height:100%;}
+.left-bar .left-menu li{padding:5px 10px;height: 120px;}
+.left-menu-panel{height: 100%;overflow: hidden;position: relative;}
+.left-menu-panel .left-menu-panel-title{width: 20px;color: #fff;position: absolute;top:0;left:0;height: 42px;background: #bbb;line-height: 42px;}
+.left-menu-panel .left-menu-panel-title:after{content: "";position: absolute;top: 21px;left: -21px;width: 0px;height: 0px;border: 21px solid transparent;border-right-color: #bbb;}
+.left-menu-panel .left-menu-panel-content{position: absolute;top:0;left:20px;width: 98px;height: 118px;float: left;background: #fff;border: 1px #bbb solid;}
 
 .right-bar{z-index: 888;position: fixed;top: 0px;right: 0;width: 360px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) -2px -2px 6px;}
 
 .right-bar .right-menu{width: 59px;height: 100%;border-right: 1px #ddd solid;float: left;}
+.right-bar .right-menu ul{list-style: none;padding: 0;margin: 0;text-align: center;cursor: pointer;margin-top: 52px;height:100%;}
+.right-bar .right-menu ul li{padding: 6px;height: 47px;background: #eee;border-bottom: 1px #ddd solid;line-height: 47px;}
 
-.right-bar .right-content{width: 300px;height: 100%;float: left;background: red;}
+
+
+.right-bar .right-content{width: 300px;height: 100%;float: left;}
