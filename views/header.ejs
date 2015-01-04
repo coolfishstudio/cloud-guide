@@ -4,19 +4,31 @@
         <title>IT酷鱼网 | H5Guide</title>
         <link rel='stylesheet' type="text/css" href='/css/style.css' />
         <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
-        <script type="text/javascript" src="/js/common.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
     </head>
     <body>
     	<div class="top-bar"><!-- topBar -->
             <div class="navbar-inner">
-                <a href="###" class="logoName"><i class="icon-magic"></i> H5Guide <sub>v0.0.1</sub></a>
+                <div class="logoName"><i class="icon-magic"></i> H5Guide <sub>v0.0.1</sub></div>
+                <div class="top-control-box">
+                    <div class="top-control" relName="imgType"><i class="icon-picture"></i>新增图片</div>
+                    <div class="top-control" relName="textType"><i class="icon-pencil"></i>新增文字</div>
+                    <div class="top-control" relName="btnType"><i class="icon-circle-blank"></i>新增按钮</div>
+                    <div class="top-control" relName="musicType"><i class="icon-music"></i>背景音乐</div>
+                </div>
+                <div class="top-button"><i class="icon-reply"></i>返回</div>
+                <div class="top-button"><i class="icon-save"></i>保存</div>
+                <div class="top-button"><i class="icon-eye-open"></i>预览</div>
+                
+                
             </div>
     	</div><!-- topBar end -->
 
         <div class="left-bar"><!-- leftBar -->
             <ul class="left-menu">
                 <li>
-                    <div class="left-menu-panel">
+                    <div class="left-menu-panel on">
                         <div class="left-menu-panel-title">1</div>
                         <div class="left-menu-panel-content">图例</div>
                     </div>
@@ -34,11 +46,18 @@
         <div class="right-bar"><!-- leftBar -->
             <div class="right-menu">
                 <ul>
-                    <li>基础</li>
-                    <li>特效</li>
-                    <li>样板</li>
+                    <li class="on" relName="jc">基础</li>
+                    <li relName="ys">样式</li>
+                    <li relName="pl">排列</li>
+                    <li relName="gs">格式</li>
+                    <li relName="xg">效果</li>
+                    <li relName="tx">特效</li>
+                    <li relName="yy">音乐</li>
                 </ul>
             </div>
             <div class="right-content"></div>
         </div><!-- leftBar end -->
 
+        <div class="conent-box"><!-- contentBox -->
+            
+        </div><!-- contentBox end -->
