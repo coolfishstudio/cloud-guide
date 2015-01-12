@@ -19,9 +19,12 @@ $(function(){
 
 	/* 新增page */
 	$('.add-page-btn').click(function(){
-		// 新增page
 		add_page();
-		// 新增样式
+	});
+	/* 选中page */
+	$('.left-menu ul').on('click', 'li', function(){
+		var _this = $(this);
+		on_page(_this);
 	});
 
 
@@ -34,9 +37,16 @@ $(function(){
 	init();
 });
 
-/* 新增page */
+//_______________page
+// 新增page
 function add_page(){
 	var _num = $('.left-menu ul li').length + 1;
 	var _html = '<li><div class="left-menu-panel"><div class="left-menu-panel-title">' + _num + '</div><div class="left-menu-panel-content"></div></div></li>';
 	$('.left-menu ul').append(_html);
 }
+// 选中page
+function on_page(obj){
+	$('.left-menu ul li .left-menu-panel').removeClass('on');
+	obj.children('.left-menu-panel').addClass('on');
+}
+//删除page
