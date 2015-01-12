@@ -16,4 +16,27 @@ $(function(){
 		$('.right-menu ul li[relName='+typeBtn[$(this).attr('relName')][0]+']').addClass('on');
 	});
 
+
+	/* 新增page */
+	$('.add-page-btn').click(function(){
+		// 新增page
+		add_page();
+		// 新增样式
+	});
+
+
+	/* 初始化 */
+	function init(){
+		//固定left-menu的高度
+		var _height = $(window).height() - 102;
+		$('.left-menu').css('height',_height);
+	}
+	init();
 });
+
+/* 新增page */
+function add_page(){
+	var _num = $('.left-menu ul li').length + 1;
+	var _html = '<li><div class="left-menu-panel"><div class="left-menu-panel-title">' + _num + '</div><div class="left-menu-panel-content"></div></div></li>';
+	$('.left-menu ul').append(_html);
+}
