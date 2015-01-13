@@ -52,7 +52,16 @@ var pageObj = {//obj is li
 	init : function(){
 		var _height = $(window).height() - 102;
 		$('.left-menu').css('height',_height);
-	}
+		if(!localStorageObj.find('page_num')){
+			localStorageObj.add('page_num', 1);
+			localStorageObj.add('page_current', 0);
+		}
+		var pageNum = localStorageObj.find('page_num');
+		for (var i = 0; i < pageNum; i++) {
+			var _html = '<li><div class="left-menu-panel' + (localStorageObj.find('page_current') == i ? ' on' : '') + '"><div class="left-menu-panel-title">' + (i + 1) + '</div><div class="left-menu-panel-content"></div><div class="left-menu-panel-close">x</div></div></li>';
+			$('.left-menu ul').append(_html);
+		};
+	},
 	//新增
 	add : function(){
 		$('.left-menu ul li .left-menu-panel').removeClass('on');
@@ -60,11 +69,14 @@ var pageObj = {//obj is li
 		var _html = '<li><div class="left-menu-panel on"><div class="left-menu-panel-title">' + _num + '</div><div class="left-menu-panel-content"></div><div class="left-menu-panel-close">x</div></div></li>';
 		$('.left-menu ul').append(_html);
 		$('.left-menu').animate({scrollTop : $('.left-menu').get(0).scrollHeight},100);
+		localStorageObj.update('page_num', _num);
+		localStorageObj.update('page_current', _num - 1);
 	},
 	//选中
 	on : function(obj){
 		$('.left-menu ul li .left-menu-panel').removeClass('on');
 		obj.children('.left-menu-panel').addClass('on');
+		localStorageObj.update('page_current', obj.index());
 	},
 	//删除
 	del : function(obj){
@@ -82,6 +94,9 @@ var pageObj = {//obj is li
 				pageObj.on(obj.next());//点亮后一个
 			}
 			obj.remove();//移出去
+			var pageNum = localStorageObj.find('page_num');
+			localStorageObj.update('page_num', pageNum - 1);
+			localStorageObj.update('page_current', pageNum - 2);
 		}else{
 			//清空
 			obj.find('.left-menu-panel-content').empty();
@@ -90,13 +105,31 @@ var pageObj = {//obj is li
 	//拖拽
 	drag : function(obj){
 
-	},
-	//清空
-	clear : function(obj){
-		obj.find('.left-menu-panel-content').empty();
 	}
 };
-//_______________
+//_______________localStorage
+var localStorageObj = {
+	//存储
+	add : function(key, value){
+		localStorage[key] = value;
+	},
+	//修改
+	update : function(key, value){
+		localStorage[key] = value;
+	},
+	//清空
+	clear : function(){
+		localStorage.clear();
+	},
+	//删除
+	delete : function(key){
+		localStorage.removeItem(key);
+	},
+	//查找
+	find : function(key){
+		return localStorage[key];
+	}
+};
 
 
 
