@@ -41,11 +41,22 @@ $(function(){
 
 	/* 初始化 */
 	function init(){
+		cardObj.init();
 		pageObj.init();
 	}
 	init();
 });
 
+//_______________card
+var cardObj = {
+	//初始化
+	init : function(){
+		if(document.location.pathname != localStorageObj.find('card_current')){
+			localStorageObj.clear();
+			localStorageObj.add('card_current', document.location.pathname);
+		}
+	}
+};
 //_______________page
 var pageObj = {//obj is li
 	//固定left-menu的高度
