@@ -2,6 +2,8 @@
 a{text-decoration: none;color: rgba(0, 0, 0, 0.65);}
 
 body{background: #eee;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;-o-user-select: none;user-select: none;overflow-x: hidden;}
+.hid{display: none;}
+.show{display: block;}
 /* 顶部 */
 
 .top-bar{position: fixed;top: 0;right: 0;left: 0;z-index: 889;margin-bottom: 0;}
@@ -15,6 +17,8 @@ body{background: #eee;-webkit-user-select: none;-moz-user-select: none;-ms-user-
 .top-bar .navbar-inner .top-button{cursor: pointer;float: right;margin: 5px 15px;color: #777777;font-size: 12px;padding: 0 4px 2px 4px;border-bottom: 2px transparent solid;transition:.4s all ease;}
 .top-bar .navbar-inner .top-button i{width: 100%;height: 24px;display: block;text-align: center;font-size: 22px;}
 .top-bar .navbar-inner .top-button:hover{border-bottom: 2px #f60 solid;color: #f60;}
+
+.top-bar .navbar-inner .top-button#menuBtn{display: none;}
 
 .left-bar{z-index: 888;position: fixed;top: 0px;left: 0;width: 140px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) 2px 2px 6px;height: 100%;}
 .left-bar .left-menu{margin: 0;text-align: center;cursor: pointer;margin-top: 52px;margin-bottom: 51px;overflow-y: auto;}
@@ -35,7 +39,7 @@ body{background: #eee;-webkit-user-select: none;-moz-user-select: none;-ms-user-
 .left-menu-panel.on .left-menu-panel-title:after{border-right-color: #f60;}
 .left-menu-panel.on .left-menu-panel-content{border: 1px #f60 solid;}
 
-.right-bar{z-index: 888;position: fixed;top: 0px;right: 0;width: 360px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) -2px -2px 6px;}
+.right-bar{z-index: 888;position: fixed;top: 0px;right: 0px;width: 360px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) -2px -2px 6px;}
 
 .right-bar .right-menu{width: 59px;height: 100%;border-right: 1px #ddd solid;float: left;}
 .right-bar .right-menu ul{list-style: none;padding: 0;margin: 0;text-align: center;cursor: pointer;margin-top: 52px;height:100%;}
@@ -46,7 +50,9 @@ body{background: #eee;-webkit-user-select: none;-moz-user-select: none;-ms-user-
 
 .right-bar .right-content{width: 300px;height: 100%;float: left;background: #ddd;}
 
+.user-bar{z-index: 888;position: fixed;top: 0px;right: -360px;width: 360px;background-color: #eee;border-collapse: separate;bottom: 0;box-shadow: rgb(216, 216, 216) -2px -2px 6px;}
+.user-bar .headImageBox{}
 
 
-.conent-box{width: 320px; height: 480px;background: #fff;position: relative;top:100px;left: 40%;margin-left: -160px;}
-
+.conent-box{width: 320px; height: 480px;position: relative;top:100px;left: 40%;margin-left: -160px;overflow: hidden;}
+.conent-box-page{width: 320px; height: 480px;background: #fff;position: relative;}
