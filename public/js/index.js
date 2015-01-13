@@ -1,7 +1,13 @@
 $(function(){
 
 
-	var typeBtn = {'imgType':['jc','ys','pl','gs','xg'],'textType':['jc','ys','pl','gs','xg'],'btnType':['jc','ys','pl','gs','xg'],'musicType':['yy'],'pageType':[]};
+	var typeBtn = {
+		'imgType' : ['jc','ys','pl','gs','xg'],
+		'textType' : ['jc','ys','pl','gs','xg'],
+		'btnType' : ['jc','ys','pl','gs','xg'],
+		'musicType' : ['yy'],
+		'pageType' : ['jc','mb']
+	};
 
 	/* 头部新增按钮 */
 	$('.top-control-box').on('click', '.top-control', function(){
@@ -24,7 +30,6 @@ $(function(){
 	/* 选中page */
 	$('.left-menu ul').on('click', 'li', function(){
 		var _this = $(this);
-		console.log(333);
 		on_page(_this);
 	});
 	/* 删除page */
@@ -51,6 +56,7 @@ function add_page(){
 	var _num = $('.left-menu ul li').length + 1;
 	var _html = '<li><div class="left-menu-panel on"><div class="left-menu-panel-title">' + _num + '</div><div class="left-menu-panel-content"></div><div class="left-menu-panel-close">x</div></div></li>';
 	$('.left-menu ul').append(_html);
+	$('.left-menu').animate({scrollTop : $('.left-menu').outerHeight()},500);
 }
 // 选中page
 function on_page(obj){
@@ -77,6 +83,11 @@ function del_page(obj){
 		//清空
 		obj.find('.left-menu-panel-content').empty();
 	}
+}
+
+//_______________menu
+function getRightMenu(type){
+
 }
 
 
